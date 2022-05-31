@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 1px solod red;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s linear;
+  }
+  
+  .line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: red;
+    }
+  
+  .btn-open {
+    justify-content: flex-start;
+    align-items: start; 
+  }
+  .btn-open__line {
+      margin-bottom: 10px;
+  }
+  .btn-open__line:last-of-type{
+     width: 15px;
+     margin-bottom: 0;
+  }
+  
+  .btn-close {
+    justify-content: center;
+    transform-origin: top;
+    transform: translateY(100%);
+    transform: rotateX(-90deg);
+  }
+ 
+.btn-close__line:nth-child(1) {
+      transform: translateY(2px)  rotate(45deg);
+      }
+.btn-close__line:nth-child(2) {
+      transform: rotate(-45deg);
+      }
+  
+  .btn-front {
+    transform: translateY(-100%);
+      transform: rotate(0);
+  }
+  
+  .btn-back {
+     transform: translateY(-100%);
+    transform: rotateX(90deg);
+  }
+
+
+  .accordion{
+    color: red;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 18px 0;
+    background: #fff;
+    outline: none;
+    text-align: left;
+    font-size: 16px;
+    border-top: 1px dotted red;
+}
+.accordion:after{
+    content: "\002b";
+    color: red;
+    font-weight: 900;
+    float: right;
+    margin-left: 5px;
+    
+}
+.active:after{
+     content: '\2212';
+}
+.panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    color: rgb(0, 0, 0 , 0.5);
+    text-align: justify;
+}
+div {
+    margin: 0 50px;
+}
